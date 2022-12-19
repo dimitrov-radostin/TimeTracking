@@ -1,0 +1,13 @@
+{
+    "EAT": [],
+    "SLEEP": [],
+    "PERSONAL_CARE": ["shower", "morning_routine"],
+    "HOUSE_CHORES": ["cooking", "laundry"],
+    "SPORTS": [],
+    "TRAVEL": [],
+    "LEISURE": ["reading", "walking"],
+    "EDUCATION": ["lectures"],
+    "WORK": [],
+    "FAMILY": [],
+    "PROJECTS": ["house project", "typing", "coding"]
+}

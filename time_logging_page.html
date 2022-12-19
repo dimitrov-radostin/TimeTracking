@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form></form> -->
+    <div id="new_entry_wrapper">
+        <div id="activities_wrapper">
+            <input type="date" name="" id="date" >
+            <div class="activity" id="first_act">
+                <input type="time" name="start_time" class="start_time" step="300" value="00:00" required>
+                <input type="time" name="end_time" class="start_time" step="300"  value="00:30" required>
+                <select class="category"></select>
+                
+                <input type="text" name="activity" class="activity" list="activities_1">
+                <datalist id="activities_1" class="activity_options">
+                    <!--  -->
+                    <option value="asd"></option>
+                </datalist>
+            </div>
+        </div>
+        <button id="add_activity">Add activity</button>
+        <button id="submit">Submit</button>
+
+        <footer>
+            da se pozvolqva li ne palen den?
+             ---> pri osrednqvaneto da ima categoriq no data ili da se propuska?#
+        </footer>
+    </div>
+
+    <script src="time_logging.js"></script>
+</body>
+</html>
