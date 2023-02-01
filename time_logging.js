@@ -27,15 +27,30 @@ fetch("categories.json")
         let first_act = document.getElementById("first_act")
         let act_wrapper = document.getElementById("activities_wrapper")
 
-        //  Activity button
+
+        //  Add activity 
         add_activity_button.addEventListener("click", event => {
-            new_act = first_act.cloneNode(true)
-            // TODO chnage datalist id
-            console.log(document.querySelectorAll(".activity").length)
-            new_act_id = "activity_" + (1 + document.querySelectorAll("input.activity").length)
-            new_act.querySelector(".activity").setAttribute("list", new_act_id )
-            new_act.querySelector(".activity_options").id=new_act_id 
-            act_wrapper.appendChild(new_act)
+
+            new_entry = first_act.cloneNode(true)
+            // change id
+
+            total_activities =  (1 + document.querySelectorAll("input.activity").length) 
+            new_entry.id = total_activities
+            new_entry.querySelector(".activity").setAttribute("list", "activity_" + total_activities )
+            new_entry.querySelector(".activity_options").id = "activity_" + total_activities 
+
+            // set times 
+            let last_act = document.getElementsByClassName("entry").item(total_activities - 2)
+            let last_act_end_time = last_act.querySelector(".end_time").value
+            let [hour, minutes] = last_act_end_time.split(/\:/g)
+            console.log(hour, minutes)
+
+            new_entry.querySelector(".start_time").value = last_act_end_time
+            console.log(typeof last_act_end_time)
+            // console.log(Date.parseExact(last_act_end_time))
+
+
+            act_wrapper.appendChild(new_entry)
         })
 
 

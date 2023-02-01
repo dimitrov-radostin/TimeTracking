@@ -1,0 +1,21 @@
+#date{
+    font-size: large;
+    margin: 1em;
+}
+
+.entry{
+    margin-bottom: 0.2em;
+}
+
+.entry>.activity{
+    height: 1.6em;
+}
+
+.entry>.category{
+    height: 1.8em;
+}
+
+#submit{
+    /* float: left; */
+    float:inline-end
+}
