@@ -9,11 +9,17 @@
 </head>
 <body>
     <!-- <form></form> -->
+
+    <datalist id="test_data_list">
+        <option value="00:05">
+        <option value="00:10"> 
+    </datalist>
+
     <div id="new_entry_wrapper">
         <div id="activities_wrapper">
             <input type="date" name="" id="date" >
             <div class="entry" id="first_act">
-                <input type="time" name="start_time" class="start_time" step="300" value="23:00" required>
+                <input type="time" name="start_time" class="start_time" step="300" value="00:00" list="test_data_list" required>
                 <input type="time" name="end_time" class="end_time" step="300"  value="00:30" required>
                 <select class="category"></select>
                 
@@ -28,14 +34,16 @@
         <button id="submit">Submit</button>
 
         <footer>
-            <p>
-                непълно логнати дни - позволени 
-                da se pozvolqva li ne palen den?
-                ---> pri osrednqvaneto da ima categoriq no data ili da se propuska?#
-            </p>
+            <br>
+            <br>
+            ideas:
+            <ul>
+                <li>непълно логнати дни - позволени; - при осредняване да се пропуска</li>
+                <li>показване на резюме на деня доакто се полълва; или при събмит</li>
+            </ul>
         </footer>
     </div>
 
-    <script src="time_logging.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>

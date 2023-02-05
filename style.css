@@ -19,3 +19,8 @@
     /* float: left; */
     float:inline-end
 }
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    display: none;
+}

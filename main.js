@@ -11,7 +11,7 @@ fetch("categories.json")
         categories = Object.keys(data)
 
         if(elements.length > 1){
-            alert("ela i me opravi")
+            alert("fix me")
         }else{
             // add select options for categories
             let original_select = elements[0]
@@ -42,14 +42,17 @@ fetch("categories.json")
             // set times 
             let last_act = document.getElementsByClassName("entry").item(total_activities - 2)
             let last_act_end_time = last_act.querySelector(".end_time").value
+
+            // just add 5 min to start to make the end
             let [hour, minutes] = last_act_end_time.split(/\:/g)
-            console.log(hour, minutes)
-
             new_entry.querySelector(".start_time").value = last_act_end_time
-            console.log(typeof last_act_end_time)
-            // console.log(Date.parseExact(last_act_end_time))
+            d = new Date
+            d.setHours(hour, minutes)
+            d2 = new Date(d.getTime() + 5*60000)      
 
-
+            new_entry.querySelector(".end_time").value = [d2.getHours(), d2.getMinutes()].map(v => v < 10 ? "0" + v : v).join(":")
+            
+            
             act_wrapper.appendChild(new_entry)
         })
 
